@@ -1,33 +1,52 @@
 
-查询版本号
-sui --version
-sui -V
 
-### 地址
-查询当前保存了密钥的所有地址
-sui client addresses
+### client
+- 查询当前保存了密钥的所有地址
+    ```bash
+    sui client addresses
+    ```
 
-查询当前在用的地址
-sui client active-address
+- 查询当前激活在用的地址
+    ```bash
+    sui client active-address
+    ```
 
-导入地址
-sui keytool import "<助记词>" ed25519
+- 创建新的地址
+    ```bash
+    sui client new-address ed25519
+    ```
 
-切换地址
-sui client switch --address <addr>
+- 切换地址
+    ```bash
+    sui client switch --address <addr>
+    ```
 
-移除地址
-sui client remove-address <addr>
+- 移除地址
+    ```bash
+    sui client remove-address <addr>
+    ```
 
-### 网络
-查询当下所有的网络
-sui client envs
+### keytool
+- 导入地址
+    ```bash
+    sui keytool import "<助记词>" ed25519
+    ```
 
-添加新的网络
-sui client new-env --alias <ALIAS> --rpc <RPC>
+### network
+- 查询当下所有的网络
+    ```bash
+    sui client envs
+    ```
 
-切换网络
-sui client switch --env [network alias]
+- 添加新的网络
+    ```bash
+    sui client new-env --alias <ALIAS> --rpc <RPC>
+    ```
+
+- 切换网络
+    ```bash
+    sui client switch --env [network alias]
+    ```
 
 
 
