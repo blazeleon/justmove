@@ -10,4 +10,4 @@
 
 ## SUI
 ### sui-cli
-[sui-cli](./sui/sui-cli.md)
+[SUI 命令行的常见操作](./sui/sui-cli.md)
