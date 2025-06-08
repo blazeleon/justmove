@@ -13,8 +13,9 @@
 
 - 创建新的地址
     ```bash
-    sui client new-address ed25519
+    sui client new-address ed25519 [alias]
     ```
+    > alias 可选，不填会默认随意生成一个别名。对于常用的地址建议自行设置一个别名，管理和使用都方便。如果创建时或后续想修改别名，你可以在 `～/.sui/sui_config`目录下找到 `sui.aliases`文件进行手动修改。
 
 - 导入地址
     ```bash
@@ -23,12 +24,12 @@
 
 - 切换地址
     ```bash
-    sui client switch --address <addr>
+    sui client switch --address <address or alias>
     ```
 
 - 移除地址
     ```bash
-    sui client remove-address <addr>
+    sui client remove-address <address or alias>
     ```
 
 - 查询当前地址可用于支付的gas
