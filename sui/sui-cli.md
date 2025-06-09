@@ -99,7 +99,24 @@
     sui client publish --gas-budget 10000000
     ```
 
+- 合约升级
+    ```bash
+    sui client upgrade --upgrade-capability <upgrade object id>
+    ```
+
 - 合约调用
     ```bash
     sui client call [OPTIONS]
     ```
+    > 例如：调用 `sui-framework` 下 `coin` 模块的 `mint_and_transfer<T>(c: &mut TreasuryCap<T>,amount: u64,recipient: address,ctx: &mut TxContext) ` 函数
+
+    ```bash
+        sui client call \
+        --package 0x2 \
+        --module coin \
+        --function mint_and_transfer \
+        --type-args "0x..." \
+        --args "0x..." "1000000000000000" "0x...""
+    ```
+
+    > 特别注意的是 `type-args` 是指函数上的范型的类型，有多个范型，传参也就传多个。 命令行换行用 `\`
